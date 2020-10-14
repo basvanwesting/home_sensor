@@ -43,10 +43,16 @@ defmodule HomeSensor.MixProject do
       {:shoehorn, "~> 0.6.0"},
       {:ring_logger, "~> 0.8.1"},
       {:toolshed, "~> 0.2.13"},
+      {:gen_stage, "~> 1.0"},
+      {:amqp, "~> 1.0"},
+      {:jason, "~> 1.2"},
+      {:crc, "~> 0.10"}, #Compile dependencies for CRC. unset LDFLAGS and CPPFLAGS
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
+      {:nerves_time, "~> 0.4.2", targets: @all_targets},
       {:nerves_pack, "~> 0.4.0", targets: @all_targets},
+      {:circuits_i2c, "~> 0.3", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.12", runtime: false, targets: :rpi},

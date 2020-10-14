@@ -8,7 +8,7 @@ defmodule HomeSensor.Application do
   def start(_type, _args) do
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: HomeSensor.Supervisor]
+    opts = [strategy: :rest_for_one, name: HomeSensor.Supervisor]
 
     children =
       [
@@ -34,6 +34,9 @@ defmodule HomeSensor.Application do
       # Children for all targets except host
       # Starts a worker by calling: HomeSensor.Worker.start_link(arg)
       # {HomeSensor.Worker, arg},
+      HomeSensor.Sensors.Supervisor,
+      HomeSensor.Publisher.Supervisor,
+      {HomeSensor.Main, 5_000}, #interval
     ]
   end
 

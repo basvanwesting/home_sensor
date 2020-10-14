@@ -23,6 +23,12 @@ config :nerves, source_date_epoch: "1602672084"
 
 config :logger, backends: [RingLogger]
 
+#config :amqp, :sensor_measurements_queue, nil
+#config :amqp, :connection_options,
+  #host:     nil,
+  #username: nil,
+  #password: nil
+
 if Mix.target() != :host do
   import_config "target.exs"
 end
