@@ -22,8 +22,12 @@ defmodule HomeSensor.Main do
 
   def init(interval) do
     Process.send_after(self(), :tick, interval)
-    host = :inet.gethostname()
-    {:ok, %State{interval: interval, host: host}}
+    {:ok, %State{interval: interval, host: get_hostname}}
+  end
+
+  def get_hostname() do
+    {:ok, host} = :inet.gethostname()
+    :erlang.iolist_to_binary(host)
   end
 
   def handle_info(:tick, state) do
