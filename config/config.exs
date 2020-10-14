@@ -10,7 +10,20 @@ config :home_sensor, target: Mix.target()
 # Customize non-Elixir parts of the firmware. See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
 
-config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
+config :nerves, :firmware,
+  rootfs_overlay: "rootfs_overlay",
+  provisioning: :nerves_hub_link
+
+config :nerves_hub_link,
+  socket: [
+    json_library: Jason,
+    heartbeat_interval: 45_000
+  ],
+  ssl: [
+    certfile: "config/certs/nerves-9794.fourstack.nl.crt",
+    keyfile:  "config/certs/nerves-9794.fourstack.nl.key"
+  ],
+  fwup_public_keys: [:devkey]
 
 # Set the SOURCE_DATE_EPOCH date for reproducible builds.
 # See https://reproducible-builds.org/docs/source-date-epoch/ for more information

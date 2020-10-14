@@ -40,6 +40,7 @@ defmodule HomeSensor.MixProject do
     [
       # Dependencies for all targets
       {:nerves, "~> 1.6.3", runtime: false},
+      {:nerves_hub_cli, "~> 0.1", runtime: false},
       {:shoehorn, "~> 0.6.0"},
       {:ring_logger, "~> 0.8.1"},
       {:toolshed, "~> 0.2.13"},
@@ -51,6 +52,7 @@ defmodule HomeSensor.MixProject do
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.11.3", targets: @all_targets},
       {:nerves_time, "~> 0.4.2", targets: @all_targets},
+      {:nerves_hub_link, "~> 0.1", targets: @all_targets},
       {:nerves_pack, "~> 0.4.0", targets: @all_targets},
       {:circuits_i2c, "~> 0.3", targets: @all_targets},
 
