@@ -1,0 +1,841 @@
+Interactive Elixir (1.10.4) - press Ctrl+C to exit (type h() ENTER for help)
+Toolshed imported. Run h(Toolshed) for more info.
+RingLogger is collecting log messages from Elixir and Linux. To see the
+messages, either attach the current IEx session to the logger:
+
+  RingLogger.attach
+
+or print the next messages in the log:
+
+  RingLogger.next
+
+iex(1)> RingLogger.next
+
+00:00:17.134 [info]  Booting Linux on physical CPU 0x0
+
+00:00:17.135 [info]  Linux version 4.19.118 (root@241e5c597159) (gcc version 9.2.0 (crosstool-NG 1.24.0.71-4fa0ba1)) #2 PREEMPT Fri Oct 9 16:17:41 UTC 2020
+
+00:00:17.136 [info]  CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+
+00:00:17.136 [info]  CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+
+00:00:17.137 [info]  OF: fdt: Machine model: Raspberry Pi Zero W Rev 1.1
+
+00:00:17.137 [info]  Memory policy: Data cache writeback
+
+00:00:17.138 [info]  cma: Reserved 8 MiB at 0x13400000
+
+00:00:17.138 [debug] On node 0 totalpages: 81920
+
+00:00:17.139 [debug]   Normal zone: 720 pages used for memmap
+
+00:00:17.140 [debug]   Normal zone: 0 pages reserved
+
+00:00:17.140 [debug]   Normal zone: 81920 pages, LIFO batch:15
+
+00:00:17.141 [info]  random: get_random_bytes called from start_kernel+0x84/0x398 with crng_init=0
+
+00:00:17.142 [debug] Jan  1 00:00:17 rngd: Added 3380/4096 bits entropy
+
+
+00:00:17.142 [debug] Jan  1 00:00:17 rngd: Added 3383/4096 bits entropy
+
+
+00:00:17.142 [debug] Jan  1 00:00:17 rngd: Added 3386/4096 bits entropy
+
+
+00:00:17.143 [debug] Jan  1 00:00:17 rngd: Added 3388/4096 bits entropy
+
+
+00:00:17.143 [debug] Jan  1 00:00:17 rngd: Added 3455/4096 bits entropy
+
+
+00:00:17.143 [debug] Jan  1 00:00:17 rngd: Added 3515/4096 bits entropy
+
+
+00:00:17.144 [debug] Jan  1 00:00:17 rngd: Added 3569/4096 bits entropy
+
+
+00:00:17.144 [debug] Jan  1 00:00:17 rngd: Added 3618/4096 bits entropy
+
+
+00:00:17.144 [debug] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+
+00:00:17.148 [debug] Jan  1 00:00:17 rngd: Added 3663/4096 bits entropy
+
+
+00:00:17.148 [debug] Jan  1 00:00:17 rngd: Added 3703/4096 bits entropy
+
+
+00:00:17.149 [debug] Jan  1 00:00:17 rngd: Added 3740/4096 bits entropy
+
+
+00:00:17.149 [debug] Jan  1 00:00:17 rngd: Added 3773/4096 bits entropy
+
+
+00:00:17.149 [debug] Jan  1 00:00:17 rngd: Added 3804/4096 bits entropy
+
+
+00:00:17.149 [debug] Jan  1 00:00:17 rngd: Added 3831/4096 bits entropy
+
+
+00:00:17.150 [debug] Jan  1 00:00:17 rngd: Added 3856/4096 bits entropy
+
+
+00:00:17.150 [debug] Jan  1 00:00:17 rngd: Added 3878/4096 bits entropy
+
+
+00:00:17.150 [debug] Jan  1 00:00:17 rngd: Added 3898/4096 bits entropy
+
+
+00:00:17.151 [debug] Jan  1 00:00:17 rngd: Added 3917/4096 bits entropy
+
+
+00:00:17.151 [debug] Jan  1 00:00:17 rngd: Added 3934/4096 bits entropy
+
+
+00:00:17.151 [debug] Jan  1 00:00:17 rngd: Added 3949/4096 bits entropy
+
+
+00:00:17.152 [debug] Jan  1 00:00:17 rngd: Added 3962/4096 bits entropy
+
+
+00:00:17.152 [debug] Jan  1 00:00:17 rngd: Added 3975/4096 bits entropy
+
+
+00:00:17.152 [debug] Jan  1 00:00:17 rngd: Added 3986/4096 bits entropy
+
+
+00:00:17.153 [debug] Jan  1 00:00:17 rngd: Added 3996/4096 bits entropy
+
+
+00:00:17.153 [debug] Jan  1 00:00:17 rngd: Added 4006/4096 bits entropy
+
+
+00:00:17.153 [debug] Jan  1 00:00:17 rngd: Added 4014/4096 bits entropy
+
+
+00:00:17.153 [debug] Jan  1 00:00:17 rngd: Added 4022/4096 bits entropy
+
+
+00:00:17.154 [debug] pcpu-alloc: [0] 0
+
+00:00:17.154 [debug] Jan  1 00:00:17 rngd: Added 4028/4096 bits entropy
+
+
+00:00:17.165 [info]  Built 1 zonelists, mobility grouping on.  Total pages: 81200
+
+00:00:17.166 [info]  Kernel command line: coherent_pool=1M 8250.nr_uarts=1 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708_fb.fbswap=1 smsc95xx.macaddr=B8:27:EB:48:97:94 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  root=/dev/mmcblk0p2 rootwait console=ttyAMA0,115200 quiet
+
+00:00:17.167 [info]  Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+
+00:00:17.167 [info]  Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+
+00:00:17.168 [info]  Memory: 308796K/327680K available (4582K kernel code, 190K rwdata, 832K rodata, 168K init, 321K bss, 10692K reserved, 8192K cma-reserved)
+
+00:00:17.168 [info]  Virtual kernel memory layout:\x0a    vector  : 0xffff0000 - 0xffff1000   (   4 kB)\x0a    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)\x0a    vmalloc : 0x94800000 - 0xff800000   (1712 MB)\x0a    lowmem  : 0x80000000 - 0x94000000   ( 320 MB)\x0a    modules : 0x7f000000 - 0x80000000   (  16 MB)\x0a      .text : 0x(ptrval) - 0x(ptrval)   (4583 kB)\x0a      .init : 0x(ptrval) - 0x(ptrval)   ( 168 kB)\x0a      .data : 0x(ptrval) - 0x(ptrval)   ( 191 kB)\x0a       .bss : 0x(ptrval) - 0x(ptrval)   ( 322 kB)
+
+00:00:17.168 [info]  SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+
+00:00:17.169 [info]  rcu: Preemptible hierarchical RCU implementation.
+
+00:00:17.174 [info]  \x09Tasks RCU enabled.
+
+00:00:17.175 [info]  NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+
+00:00:17.175 [info]  sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+
+00:00:17.176 [info]  clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+
+00:00:17.176 [info]  bcm2835: system timer (irq = 27)
+
+00:00:17.177 [debug] Jan  1 00:00:17 rngd: Added 4035/4096 bits entropy
+
+
+00:00:17.177 [debug] Jan  1 00:00:17 rngd: Pool full at 4096, sleeping!
+
+
+00:00:17.194 [info]  Console: colour dummy device 80x30
+
+00:00:17.195 [info]  Calibrating delay loop... 697.95 BogoMIPS (lpj=3489792)
+
+00:00:17.195 [info]  pid_max: default: 32768 minimum: 301
+
+00:00:17.195 [info]  Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+
+00:00:17.199 [info]  Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+
+00:00:17.200 [info]  CPU: Testing write buffer coherency: ok
+
+00:00:17.201 [info]  Setting up static identity map for 0x8200 - 0x8238
+
+00:00:17.201 [info]  rcu: Hierarchical SRCU implementation.
+
+00:00:17.202 [info]  devtmpfs: initialized
+
+00:00:17.202 [info]  VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+
+00:00:17.203 [info]  clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+
+00:00:17.203 [info]  futex hash table entries: 256 (order: -1, 3072 bytes)
+
+00:00:17.204 [info]  pinctrl core: initialized pinctrl subsystem
+
+00:00:17.207 [info]  NET: Registered protocol family 16
+
+00:00:17.207 [info]  DMA: preallocated 1024 KiB pool for atomic coherent allocations
+
+00:00:17.207 [info]  Serial: AMBA PL011 UART driver
+
+00:00:17.208 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.208 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.209 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.209 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.230 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.231 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.231 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.232 [info]  persistent_ram: uncorrectable error in header
+
+00:00:17.232 [info]  console [pstore-1] enabled
+
+00:00:17.233 [info]  pstore: Registered ramoops as persistent store backend
+
+00:00:17.242 [info]  ramoops: attached 0x100000@0xb000000, ecc: 16/0
+
+00:00:17.243 [info]  bcm2835-mbox 2000b880.mailbox: mailbox enabled
+
+00:00:17.243 [info]  raspberrypi-firmware soc:firmware: Attached to firmware from 2020-04-15 11:44, variant start_x
+
+00:00:17.244 [info]  raspberrypi-firmware soc:firmware: Firmware hash is 82f9bb929ce2186eb1824178c1ae82902ad6275c
+
+00:00:17.245 [info]  bcm2835-dma 20007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+
+00:00:17.245 [info]  clocksource: Switched to clocksource timer
+
+00:00:17.246 [info]  NET: Registered protocol family 2
+
+00:00:17.246 [info]  tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes)
+
+00:00:17.247 [info]  TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+
+00:00:17.247 [info]  TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+
+00:00:17.248 [info]  TCP: Hash tables configured (established 4096 bind 4096)
+
+00:00:17.248 [info]  UDP hash table entries: 256 (order: 0, 4096 bytes)
+
+00:00:17.249 [info]  UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+
+00:00:17.259 [info]  NET: Registered protocol family 1
+
+00:00:17.262 [info]  Initialise system trusted keyrings
+
+00:00:17.263 [info]  workingset: timestamp_bits=14 max_order=17 bucket_order=3
+
+00:00:17.263 [info]  squashfs: version 4.0 (2009/01/31) Phillip Lougher
+
+00:00:17.264 [info]  Key type asymmetric registered
+
+00:00:17.264 [info]  Asymmetric key parser 'x509' registered
+
+00:00:17.265 [info]  Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+
+00:00:17.265 [info]  io scheduler noop registered
+
+00:00:17.266 [info]  io scheduler cfq registered (default)
+
+00:00:17.266 [info]  bcm2708_fb soc:fb: FB found 1 display(s)
+
+00:00:17.267 [info]  Console: switching to colour frame buffer device 82x26
+
+00:00:17.267 [info]  bcm2708_fb soc:fb: Registered framebuffer for display 0, size 656x416
+
+00:00:17.268 [info]  Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+
+00:00:17.293 [info]  bcm2835-rng 20104000.rng: hwrng registered
+
+00:00:17.293 [info]  vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+
+00:00:17.294 [info]  vc-sm: Videocore shared memory driver
+
+00:00:17.295 [info]  gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+
+00:00:17.295 [info]  brd: module loaded
+
+00:00:17.296 [info]  loop: module loaded
+
+00:00:17.296 [error] spi-bcm2835 20204000.spi: could not get clk: -517
+
+00:00:17.297 [info]  udc-core: couldn't find an available UDC - added [g_ether] to list of pending drivers
+
+00:00:17.297 [info]  i2c /dev entries driver
+
+00:00:17.298 [info]  Driver for 1-wire Dallas network protocol.
+
+00:00:17.298 [info]  bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+
+00:00:17.299 [info]  bcm2835-cpufreq: min=700000 max=1000000
+
+00:00:17.310 [info]  sdhci: Secure Digital Host Controller Interface driver
+
+00:00:17.311 [info]  sdhci: Copyright(c) Pierre Ossman
+
+00:00:17.311 [info]  mmc-bcm2835 20300000.mmcnr: could not get clk, deferring probe
+
+00:00:17.312 [info]  sdhost-bcm2835 20202000.mmc: could not get clk, deferring probe
+
+00:00:17.312 [info]  sdhci-pltfm: SDHCI platform and OF driver helper
+
+00:00:17.313 [info]  ledtrig-cpu: registered to indicate activity on CPUs
+
+00:00:17.313 [info]  vchiq: vchiq_init_state: slot_zero = (ptrval), is_master = 0
+
+00:00:17.314 [info]  [vc_sm_connected_init]: start
+
+00:00:17.314 [info]  [vc_sm_connected_init]: end - returning 0
+
+00:00:17.314 [info]  NET: Registered protocol family 10
+
+00:00:17.315 [info]  Segment Routing with IPv6
+
+00:00:17.315 [info]  NET: Registered protocol family 17
+
+00:00:17.316 [info]  Loading compiled-in X.509 certificates
+
+00:00:17.341 [info]  pstore: Using compression: deflate
+
+00:00:17.342 [info]  uart-pl011 20201000.serial: cts_event_workaround enabled
+
+00:00:17.342 [info]  20201000.serial: ttyAMA0 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
+
+00:00:17.343 [info]  console [ttyAMA0] enabled
+
+00:00:17.343 [info]  20215040.serial: ttyS0 at MMIO 0x0 (irq = 53, base_baud = 31250000) is a 16550
+
+00:00:17.344 [info]  mmc-bcm2835 20300000.mmcnr: mmc_debug:0 mmc_debug2:0
+
+00:00:17.345 [info]  mmc-bcm2835 20300000.mmcnr: DMA channel allocated
+
+00:00:17.345 [info]  sdhost: log_buf @ (ptrval) (53510000)
+
+00:00:17.345 [warn]  mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+
+00:00:17.346 [warn]  mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+
+00:00:17.346 [warn]  mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+
+00:00:17.347 [warn]  mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+
+00:00:17.347 [info]  mmc0: sdhost-bcm2835 loaded - DMA enabled (>1)
+
+00:00:17.370 [info]  of_cfs_init
+
+00:00:17.371 [info]  of_cfs_init: OK
+
+00:00:17.371 [info]  uart-pl011 20201000.serial: no DMA platform data
+
+00:00:17.372 [info]  Waiting for root device /dev/mmcblk0p2...
+
+00:00:17.372 [info]  random: fast init done
+
+00:00:17.373 [warn]  mmc0: host does not support reading read-only switch, assuming write-enable
+
+00:00:17.373 [info]  mmc0: new high speed SDHC card at address 59b4
+
+00:00:17.374 [info]  mmcblk0: mmc0:59b4 USDU1 14.9 GiB
+
+00:00:17.374 [info]   mmcblk0: p1 p2 p3
+
+00:00:17.374 [info]  VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+
+00:00:17.375 [info]  mmc1: new high speed SDIO card at address 0001
+
+00:00:17.375 [info]  devtmpfs: mounted
+
+00:00:17.376 [info]  Freeing unused kernel memory: 168K
+
+00:00:17.378 [warn]  This architecture does not have kernel memory protection.
+
+00:00:17.378 [info]  Run /sbin/init as init process
+
+00:00:17.379 [error] EXT4-fs (mmcblk0p3): VFS: Can't find ext4 filesystem
+
+00:00:17.379 [warn]  erlinit: Cannot mount /dev/mmcblk0p3 at /root: Invalid argument
+
+00:00:17.396 [warn]  heart: kernel watchdog activated (interval 5s)
+
+00:00:17.396 [info]  random: crng init done
+
+00:00:17.531 [info]  mount: mounting /dev/mmcblk0p3 on /root failed: Invalid argument
+
+00:00:17.532 [warn]  Ignoring non-zero exit status from mount ["-t", "ext4", "-o", "rw", "/dev/mmcblk0p3", "/root"]
+
+00:00:17.586 [warn]  Formatting application partition. If this hangs, it could be waiting on the urandom pool to be initialized
+
+00:00:17.681 [info]  cfg80211: Loading compiled-in X.509 certificates for regulatory database
+
+00:00:17.762 [info]  mke2fs 1.45.6 (20-Mar-2020)
+
+00:00:17.801 [info]  cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+
+00:00:17.843 [info]  Discarding device blocks:    4096/3815161
+
+00:00:17.931 [info]  brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43430-sdio for chip BCM43430/1
+
+00:00:18.271 [warn]  vc_sm_cma: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:18.290 [info]  bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+
+00:00:18.291 [info]  [vc_sm_connected_init]: start
+
+00:00:18.291 [info]  [vc_sm_connected_init]: installed successfully
+
+00:00:18.314 [info]   528384/3815161
+
+00:00:18.361 [info]  media: Linux media interface: v0.10
+
+00:00:18.521 [info]  brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43430-sdio for chip BCM43430/1
+
+00:00:18.531 [info]  brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM43430/1 wl0: May  2 2019 02:39:18 version 7.45.98.83 (r714225 CY) FWID 01-e539531f
+
+00:00:18.761 [info]  videodev: Linux video capture interface: v2.00
+
+00:00:18.831 [warn]  bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:18.851 [warn]  bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:19.161 [info]  1576960/3815161
+
+00:00:19.911 [warn]  snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:19.941 [info]  bcm2835_audio soc:audio: card created with 8 channels
+
+00:00:20.121 [warn]  dwc2 20980000.usb: 20980000.usb supply vusb_d not found, using dummy regulator
+
+00:00:20.121 [info]  dwc2 20980000.usb: Linked as a consumer to regulator.0
+
+00:00:20.122 [warn]  dwc2 20980000.usb: 20980000.usb supply vusb_a not found, using dummy regulator
+
+00:00:20.123 [warn]  dwc2 20980000.usb: Configuration mismatch. dr_mode forced to device
+
+00:00:20.221 [warn]  dwc2 20980000.usb: dwc2_check_params: Invalid parameter lpm=1
+
+00:00:20.222 [warn]  dwc2 20980000.usb: dwc2_check_params: Invalid parameter lpm_clock_gating=1
+
+00:00:20.222 [warn]  dwc2 20980000.usb: dwc2_check_params: Invalid parameter besl=1
+
+00:00:20.223 [warn]  dwc2 20980000.usb: dwc2_check_params: Invalid parameter hird_threshold_en=1
+
+00:00:20.223 [info]  dwc2 20980000.usb: EPs: 8, dedicated fifos, 4080 entries in SPRAM
+
+00:00:20.224 [warn]  using random self ethernet address
+
+00:00:20.224 [warn]  using random host ethernet address
+
+00:00:20.231 [info]  usb0: HOST MAC 76:13:54:a2:1b:79
+
+00:00:20.231 [info]  usb0: MAC c2:f2:02:62:8f:27
+
+00:00:20.232 [warn]  using random self ethernet address
+
+00:00:20.232 [warn]  using random host ethernet address
+
+00:00:20.233 [info]  g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+
+00:00:20.236 [info]  g_ether gadget: g_ether ready
+
+00:00:20.236 [info]  dwc2 20980000.usb: bound driver g_ether
+
+00:00:20.359 [info]  3149824/3815161
+
+00:00:20.900 [info]
+
+00:00:done
+
+00:00:20.910 [info]  Creating filesystem with 3815161 4k blocks and 954720 inodes
+
+00:00:20.910 [info]  Filesystem UUID: 3041e38d-615b-48d4-affb-a7787b5c4c39
+
+00:00:20.911 [info]  Superblock backups stored on blocks:
+
+00:00:20.911 [info]  	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+
+00:00:20.911 [info]  Allocating group tables: done
+
+00:00:20.977 [info]  Writing inode tables:   0/117
+
+00:00:20.984 [info]  done
+
+00:00:21.044 [info]  Creating journal (16384 blocks):
+
+00:00:26.240 [info]  done
+
+00:00:26.241 [info]  Writing superblocks and filesystem accounting information:   0/117
+
+00:00:26.382 [info]
+
+00:00:26.383 [info]
+
+00:00:26.539 [info]  done
+
+00:00:26.593 [info]  EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+
+00:00:30.569 [debug] VintageNet(wlan0): :configured -> internal configure (VintageNetWiFi)
+
+00:00:30.679 [info]  IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+
+00:00:30.681 [info]  brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+
+00:00:30.736 [debug] udhcpc(wlan0): udhcpc: started, v1.31.1
+
+00:00:30.739 [info]  wlan0 dhcp deconfig: %{interface: "wlan0"}
+
+00:00:30.773 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:31.367 [info]  RTC (NervesTime.FileTime) reports that the time hasn't been set.
+
+00:00:00.003 [debug] Starting /usr/sbin/ntpd with: ["-n", "-S", "/srv/erlang/lib/nerves_time-0.4.2/priv/ntpd_script", "-p", "0.pool.ntp.org", "-p", "1.pool.ntp.org", "-p", "2.pool.ntp.org", "-p", "3.pool.ntp.org"]
+
+00:00:00.010 [info]  nerves_time set system clock to 2020-07-25 00:00:00 UTC
+
+00:00:00.523 [debug] wpa_supplicant: Successfully initialized wpa_supplicant
+
+00:00:00.791 [debug] wpa_supplicant: wlan0: CTRL-EVENT-REGDOM-CHANGE init=USER type=COUNTRY alpha2=NL
+
+00:00:01.398 [debug] wpa_supplicant: CTRL_IFACE: Detach monitor that cannot receive messages: /tmp/vintage_net/wpa_supplicant/wlan0.ex\x00
+
+00:00:01.401 [debug] wpa_supplicant: wlan0: Trying to associate with SSID '[FILTERED]'
+
+00:00:02.158 [debug] wpa_supplicant: wlan0: Associated with 6c:70:9f:db:cb:2c
+
+00:00:02.159 [debug] wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED - Connection to 6c:70:9f:db:cb:2c completed [id=0 id_str=]
+
+00:00:02.159 [debug] wpa_supplicant: wlan0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+
+00:00:02.159 [debug] wpa_supplicant: wlan0: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=NL
+
+00:00:02.160 [info]  IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+
+00:00:02.411 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:02.467 [debug] udhcpc(wlan0): udhcpc: sending select for 192.168.0.129
+
+00:00:02.533 [debug] udhcpc(wlan0): udhcpc: lease of 192.168.0.129 obtained, lease time 7200
+
+00:00:02.538 [debug] udhcpc.renew(wlan0): %{broadcast: "192.168.0.255", dns: ["192.168.0.1"], hostname: "nerves-9794", interface: "wlan0", ip: "192.168.0.129", lease: "7200", mask: "24", opt53: "05", opt58: "00000e10", opt59: "0000189c", router: ["192.168.0.1"], serverid: "192.168.0.1", siaddr: "192.168.0.1", subnet: "255.255.255.0"}
+
+00:00:02.576 [info]  RouteManager: set_route wlan0 -> :lan
+
+00:00:02.746 [info]  RouteManager: set_connection_status wlan0 -> :internet
+
+00:00:03.663 [info]  [supervisor: {#PID<0.1779.0>, :amqp_connection_sup}, started: [pid: #PID<0.1780.0>, name: :connection_type_sup, mfargs: {:amqp_connection_type_sup, :start_link, []}, restart_type: :transient, shutdown: :infinity, child_type: :supervisor]]
+
+00:00:03.669 [info]  [supervisor: {#PID<0.1779.0>, :amqp_connection_sup}, started: [pid: #PID<0.1781.0>, name: :connection, mfargs: {:amqp_gen_connection, :start_link, [#PID<0.1780.0>, {:amqp_params_network, "[FILTERED]", {:plaintext, "[FILTERED]"}, "/", '77.61.241.157', 5672, 0, 0, 10, 50000, :none, [&:amqp_auth_mechanisms.plain/3, &:amqp_auth_mechanisms.amqplain/3], [], []}]}, restart_type: :intrinsic, shutdown: :brutal_kill, child_type: :worker]]
+
+00:00:03.696 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1782.0>, name: :channel_sup_sup, mfargs: {:amqp_channel_sup_sup, :start_link, [:network, #PID<0.1781.0>, "client 192.168.0.129:50743 -> 77.61.241.157:5672"]}, restart_type: :intrinsic, shutdown: :infinity, child_type: :supervisor]]
+
+00:00:03.700 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1783.0>, name: :channels_manager, mfargs: {:amqp_channels_manager, :start_link, [#PID<0.1781.0>, "client 192.168.0.129:50743 -> 77.61.241.157:5672", #PID<0.1782.0>]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.703 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1784.0>, name: :writer, mfargs: {:rabbit_writer, :start_link, [#Port<0.113>, 0, 4096, :rabbit_framing_amqp_0_9_1, #PID<0.1781.0>, "client 192.168.0.129:50743 -> 77.61.241.157:5672", false, 1000000000]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.708 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1785.0>, name: :main_reader, mfargs: {:amqp_main_reader, :start_link, [#Port<0.113>, #PID<0.1781.0>, #PID<0.1783.0>, {:method, :rabbit_framing_amqp_0_9_1}, "client 192.168.0.129:50743 -> 77.61.241.157:5672"]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.726 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1786.0>, name: :heartbeat_sender, mfargs: {:rabbit_heartbeat, :start_heartbeat_sender, [#Port<0.113>, 10, #Function<2.44129743/0 in :amqp_network_connection.start_heartbeat/1>, {:heartbeat_sender, "client 192.168.0.129:50743 -> 77.61.241.157:5672"}]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.729 [info]  [supervisor: {#PID<0.1780.0>, :amqp_connection_type_sup}, started: [pid: #PID<0.1787.0>, name: :heartbeat_receiver, mfargs: {:rabbit_heartbeat, :start_heartbeat_receiver, [#Port<0.113>, 10, #Function<3.44129743/0 in :amqp_network_connection.start_heartbeat/1>, {:heartbeat_receiver, "client 192.168.0.129:50743 -> 77.61.241.157:5672"}]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.753 [info]  [supervisor: {#PID<0.1788.0>, :amqp_channel_sup}, started: [pid: #PID<0.1789.0>, name: :gen_consumer, mfargs: {:amqp_gen_consumer, :start_link, [:amqp_selective_consumer, [], {"client 192.168.0.129:50743 -> 77.61.241.157:5672", 1}]}, restart_type: :intrinsic, shutdown: 30000, child_type: :worker]]
+
+00:00:03.757 [info]  [supervisor: {#PID<0.1788.0>, :amqp_channel_sup}, started: [pid: #PID<0.1790.0>, name: :channel, mfargs: {:amqp_channel, :start_link, [:network, #PID<0.1781.0>, 1, #PID<0.1789.0>, {"client 192.168.0.129:50743 -> 77.61.241.157:5672", 1}]}, restart_type: :intrinsic, shutdown: 30000, child_type: :worker]]
+
+00:00:03.760 [info]  [supervisor: {#PID<0.1788.0>, :amqp_channel_sup}, started: [pid: #PID<0.1791.0>, name: :writer, mfargs: {:rabbit_writer, :start_link, [#Port<0.113>, 1, 131072, :rabbit_framing_amqp_0_9_1, #PID<0.1790.0>, {"client 192.168.0.129:50743 -> 77.61.241.157:5672", 1}, false, 1000000000]}, restart_type: :transient, shutdown: 30000, child_type: :worker]]
+
+00:00:03.782 [info]  handle_demand(1, :ok) called
+
+259 out of 259 new messages shown.
+:ok
+iex(2)> use Toolshed
+Toolshed imported. Run h(Toolshed) for more info.
+:ok
+iex(3)> dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.118 (root@241e5c597159) (gcc version 9.2.0 (crosstool-NG 1.24.0.71-4fa0ba1)) #2 PREEMPT Fri Oct 9 16:17:41 UTC 2020
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Raspberry Pi Zero W Rev 1.1
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] cma: Reserved 8 MiB at 0x13400000
+[    0.000000] On node 0 totalpages: 81920
+[    0.000000]   Normal zone: 720 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 81920 pages, LIFO batch:15
+[    0.000000] random: get_random_bytes called from start_kernel+0x84/0x398 with crng_init=0
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 81200
+[    0.000000] Kernel command line: coherent_pool=1M 8250.nr_uarts=1 bcm2708_fb.fbwidth=656 bcm2708_fb.fbheight=416 bcm2708_fb.fbswap=1 smsc95xx.macaddr=B8:27:EB:48:97:94 vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  root=/dev/mmcblk0p2 rootwait console=ttyAMA0,115200 quiet
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 308796K/327680K available (4582K kernel code, 190K rwdata, 832K rodata, 168K init, 321K bss, 10692K reserved, 8192K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x94800000 - 0xff800000   (1712 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x94000000   ( 320 MB)
+[    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (4583 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   ( 168 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 191 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 322 kB)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000031] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+[    0.000062] clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+[    0.000162] bcm2835: system timer (irq = 27)
+[    0.000472] Console: colour dummy device 80x30
+[    0.000545] Calibrating delay loop... 697.95 BogoMIPS (lpj=3489792)
+[    0.060295] pid_max: default: 32768 minimum: 301
+[    0.060891] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.060909] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.062205] CPU: Testing write buffer coherency: ok
+[    0.063651] Setting up static identity map for 0x8200 - 0x8238
+[    0.063882] rcu: Hierarchical SRCU implementation.
+[    0.065309] devtmpfs: initialized
+[    0.075270] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    0.075878] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.075907] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.077379] pinctrl core: initialized pinctrl subsystem
+[    0.078492] NET: Registered protocol family 16
+[    0.081407] DMA: preallocated 1024 KiB pool for atomic coherent allocations
+[    0.088629] Serial: AMBA PL011 UART driver
+[    0.089326] persistent_ram: uncorrectable error in header
+[    0.089465] persistent_ram: uncorrectable error in header
+[    0.089593] persistent_ram: uncorrectable error in header
+[    0.089731] persistent_ram: uncorrectable error in header
+[    0.089859] persistent_ram: uncorrectable error in header
+[    0.089985] persistent_ram: uncorrectable error in header
+[    0.090111] persistent_ram: uncorrectable error in header
+[    0.090258] persistent_ram: uncorrectable error in header
+[    0.090557] console [pstore-1] enabled
+[    0.090909] pstore: Registered ramoops as persistent store backend
+[    0.090925] ramoops: attached 0x100000@0xb000000, ecc: 16/0
+[    0.093753] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+[    0.110628] raspberrypi-firmware soc:firmware: Attached to firmware from 2020-04-15 11:44, variant start_x
+[    0.120642] raspberrypi-firmware soc:firmware: Firmware hash is 82f9bb929ce2186eb1824178c1ae82902ad6275c
+[    0.142938] bcm2835-dma 20007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+[    0.146808] clocksource: Switched to clocksource timer
+[    0.165638] NET: Registered protocol family 2
+[    0.166626] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes)
+[    0.166755] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.166999] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.167096] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.167257] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.167296] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.167620] NET: Registered protocol family 1
+[    0.169099] Initialise system trusted keyrings
+[    0.169407] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+[    0.182044] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.185572] Key type asymmetric registered
+[    0.185587] Asymmetric key parser 'x509' registered
+[    0.185688] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    0.186055] io scheduler noop registered
+[    0.186660] io scheduler cfq registered (default)
+[    0.188810] bcm2708_fb soc:fb: FB found 1 display(s)
+[    0.197847] Console: switching to colour frame buffer device 82x26
+[    0.202452] bcm2708_fb soc:fb: Registered framebuffer for display 0, size 656x416
+[    0.204252] Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+[    0.206729] bcm2835-rng 20104000.rng: hwrng registered
+[    0.207552] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+[    0.208615] vc-sm: Videocore shared memory driver
+[    0.209223] gpiomem-bcm2835 20200000.gpiomem: Initialised: Registers at 0x20200000
+[    0.225955] brd: module loaded
+[    0.234079] loop: module loaded
+[    0.235316] spi-bcm2835 20204000.spi: could not get clk: -517
+[    0.235949] udc-core: couldn't find an available UDC - added [g_ether] to list of pending drivers
+[    0.235961] i2c /dev entries driver
+[    0.236614] Driver for 1-wire Dallas network protocol.
+[    0.238320] bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+[    0.238751] bcm2835-cpufreq: min=700000 max=1000000
+[    0.239506] sdhci: Secure Digital Host Controller Interface driver
+[    0.239519] sdhci: Copyright(c) Pierre Ossman
+[    0.240139] mmc-bcm2835 20300000.mmcnr: could not get clk, deferring probe
+[    0.240807] sdhost-bcm2835 20202000.mmc: could not get clk, deferring probe
+[    0.241038] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.241664] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.242844] vchiq: vchiq_init_state: slot_zero = (ptrval), is_master = 0
+[    0.244712] [vc_sm_connected_init]: start
+[    0.254051] [vc_sm_connected_init]: end - returning 0
+[    0.256721] NET: Registered protocol family 10
+[    0.258608] Segment Routing with IPv6
+[    0.258765] NET: Registered protocol family 17
+[    0.260035] Loading compiled-in X.509 certificates
+[    0.260534] pstore: Using compression: deflate
+[    0.263179] uart-pl011 20201000.serial: cts_event_workaround enabled
+[    0.263303] 20201000.serial: ttyAMA0 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
+[    0.269368] console [ttyAMA0] enabled
+[    0.271367] 20215040.serial: ttyS0 at MMIO 0x0 (irq = 53, base_baud = 31250000) is a 16550
+[    0.277209] mmc-bcm2835 20300000.mmcnr: mmc_debug:0 mmc_debug2:0
+[    0.277227] mmc-bcm2835 20300000.mmcnr: DMA channel allocated
+[    0.304678] sdhost: log_buf @ (ptrval) (53510000)
+[    0.322388] mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+[    0.324019] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    0.325642] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+[    0.328550] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+[    0.356894] mmc0: sdhost-bcm2835 loaded - DMA enabled (>1)
+[    0.357171] of_cfs_init
+[    0.357280] of_cfs_init: OK
+[    0.358130] uart-pl011 20201000.serial: no DMA platform data
+[    0.358317] Waiting for root device /dev/mmcblk0p2...
+[    0.379827] random: fast init done
+[    0.418202] mmc0: host does not support reading read-only switch, assuming write-enable
+[    0.420825] mmc0: new high speed SDHC card at address 59b4
+[    0.422309] mmcblk0: mmc0:59b4 USDU1 14.9 GiB
+[    0.425017]  mmcblk0: p1 p2 p3
+[    0.454175] VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+[    0.454468] mmc1: new high speed SDIO card at address 0001
+[    0.459437] devtmpfs: mounted
+[    0.460053] Freeing unused kernel memory: 168K
+[    0.460063] This architecture does not have kernel memory protection.
+[    0.460070] Run /sbin/init as init process
+[    0.685632] EXT4-fs (mmcblk0p3): VFS: Can't find ext4 filesystem
+[    0.692944] erlinit: Cannot mount /dev/mmcblk0p3 at /root: Invalid argument
+[   15.770814] heart: kernel watchdog activated (interval 5s)
+[   17.052546] random: crng init done
+[   17.686736] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   17.799451] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   17.933859] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43430-sdio for chip BCM43430/1
+[   18.274540] vc_sm_cma: module is from the staging directory, the quality is unknown, you have been warned.
+[   18.279446] bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+[   18.279465] [vc_sm_connected_init]: start
+[   18.280692] [vc_sm_connected_init]: installed successfully
+[   18.366338] media: Linux media interface: v0.10
+[   18.521966] brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43430-sdio for chip BCM43430/1
+[   18.534520] brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM43430/1 wl0: May  2 2019 02:39:18 version 7.45.98.83 (r714225 CY) FWID 01-e539531f
+[   18.759253] videodev: Linux video capture interface: v2.00
+[   18.833785] bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+[   18.850597] bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+[   19.915773] snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+[   19.927761] bcm2835_audio soc:audio: card created with 8 channels
+[   20.123610] dwc2 20980000.usb: 20980000.usb supply vusb_d not found, using dummy regulator
+[   20.123673] dwc2 20980000.usb: Linked as a consumer to regulator.0
+[   20.123694] dwc2 20980000.usb: 20980000.usb supply vusb_a not found, using dummy regulator
+[   20.123812] dwc2 20980000.usb: Configuration mismatch. dr_mode forced to device
+[   20.225209] dwc2 20980000.usb: dwc2_check_params: Invalid parameter lpm=1
+[   20.225228] dwc2 20980000.usb: dwc2_check_params: Invalid parameter lpm_clock_gating=1
+[   20.225238] dwc2 20980000.usb: dwc2_check_params: Invalid parameter besl=1
+[   20.225246] dwc2 20980000.usb: dwc2_check_params: Invalid parameter hird_threshold_en=1
+[   20.225284] dwc2 20980000.usb: EPs: 8, dedicated fifos, 4080 entries in SPRAM
+[   20.226291] using random self ethernet address
+[   20.226305] using random host ethernet address
+[   20.233402] usb0: HOST MAC 76:13:54:a2:1b:79
+[   20.233594] usb0: MAC c2:f2:02:62:8f:27
+[   20.233643] using random self ethernet address
+[   20.233651] using random host ethernet address
+[   20.233763] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   20.233773] g_ether gadget: g_ether ready
+[   20.233801] dwc2 20980000.usb: bound driver g_ether
+[   26.592509] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   30.675190] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   30.675214] brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+[   33.464377] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+iex(4)> RingLogger.next
+
+14:13:59.778 [warn]  SCD30 measurement not ready!
+
+14:14:28.714 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:14:28.709657Z","quantity":"CO2","sensor":"SCD30","unit":"ppm","value":547.43798828125}
+
+14:14:28.716 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:14:28.711820Z","quantity":"Temperature","sensor":"SCD30","unit":"Celcius","value":25.32311248779297}
+
+14:14:28.719 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:14:28.712883Z","quantity":"Humidity","sensor":"SCD30","unit":"%","value":31.6009521484375}
+
+14:14:28.722 [info]  handle_demand(1, :ok) called
+
+5 out of 5 new messages shown.
+:ok
+iex(5)> Supervisor.which_children(NervesHubLink.Supervisor)
+[
+  {NervesHubLink.UpdateManager, #PID<0.1766.0>, :worker,
+   [NervesHubLink.UpdateManager]},
+  {NervesHubLink.DeviceChannel, #PID<0.1765.0>, :worker,
+   [NervesHubLink.DeviceChannel]},
+  {PhoenixClient.Socket, #PID<0.1764.0>, :worker, [PhoenixClient.Socket]},
+  {NervesHubLink.Connection, #PID<0.1763.0>, :worker,
+   [NervesHubLink.Connection]}
+]
+iex(6)> :sys.get_state(pid(0, 1763, 0))
+{:disconnected, 38}
+iex(7)> NervesHubLink.Connection.check
+:ok
+iex(8)> RingLogger.next
+
+14:14:41.892 [warn]  SCD30 measurement not ready!
+
+14:15:24.005 [warn]  SCD30 measurement not ready!
+
+14:15:28.718 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:15:28.716576Z","quantity":"CO2","sensor":"SCD30","unit":"ppm","value":550.51953125}
+
+14:15:28.722 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:15:28.718488Z","quantity":"Temperature","sensor":"SCD30","unit":"Celcius","value":25.40589141845703}
+
+14:15:28.725 [info]  publishing {"host":"nerves-9794","location":null,"measured_at":"2020-10-14T14:15:28.720898Z","quantity":"Humidity","sensor":"SCD30","unit":"%","value":31.44378662109375}
+
+14:15:28.728 [info]  handle_demand(1, :ok) called
+
+6 out of 6 new messages shown.
+:ok
+iex(9)> dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+...
+[   33.464377] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+iex(10)> weather
+??  weather report for: Breda, Netherlands  ??????????????????????????????
+?                                                                        ?
+?                                                                        ?
+?       Wed 14 Oct              Thu 15 Oct              Fri 16 Oct       ?
+?                       ?                       ?                        ?
+?                                                                        ?
+?                                                                        ?
+?+10          ????                                              ?        ?
+?            ?   ?                                            ?????      ?
+?           ?     ?                   ????                   ??   ??     ?
+?          ??     ??                ??   ???                ??     ??    ?
+?         ??       ??              ??       ???             ?       ??   ?
+?         ?          ???          ??          ??           ??         ????
+??       ?              ???????????             ?         ??             ?
+???     ??                                       ??      ??              ?
+????   ??                                         ????????               ?
+?+2?????                                                                 ?
+?                                                                        ?
+??????????????????????????????????????????????????????????????????????????
+?     6    12    18           6    12    18           6    12    18      ?
+?                                                                        ?
+?            0.12mm|72%                                                  ?
+?                ???                                                     ?
+?               ?????                                                    ?
+?              _?????                                                    ?
+?              ???????                                                   ?
+?        _    ?????????                                                  ?
+?                                                                        ?
+?                                                                        ?
+? ?? ?? ?? ??  ??  ??  ??  ??  ??  ??  ??  ??  ??  ??  ?? ?? ??  ?? ??  ??  ??  ?? ??  ???
+? ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ?  ? ?
+? 14 15 14 15 18 18 19 14 12 12 11 16 20 19 13 10 10 11 12 12 13 14 10 6 ?
+?                                                                        ?
+???                     ??                      ??                     ???
+?      ????????????            ????????????            ????????????      ?
+?                                                                        ?
+?                                                                        ?
+??????????????????????????????????????????????????????????????????????????
+Weather: ?? Overcast, +12¡C, 71%, ?20km/h, 1018hPa
+Timezone: Europe/Amsterdam
+  Now:    16:15:51+0200 | Dawn:    07:29:51  | Sunrise: 08:04:14
+  Zenith: 13:26:59      | Sunset:  18:48:39  | Dusk:    19:22:58
+iex(11)>
