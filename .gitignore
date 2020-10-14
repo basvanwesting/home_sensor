@@ -19,3 +19,4 @@ erl_crash.dump
 /log
 /config/target.secrets.exs
 /config/certs
+/nerves-hub
