@@ -7,8 +7,9 @@ defmodule HomeSensor.Configurator do
   @impl true
   def build(config) do
     priv_dir = Application.app_dir(:home_sensor, "priv")
-    certfile = Path.join(priv_dir, "9794.cert")
-    keyfile = Path.join(priv_dir, "9794.key")
+    serial_number = Nerves.Runtime.serial_number()
+    certfile = Path.join(priv_dir, "#{serial_number}.cert")
+    keyfile = Path.join(priv_dir, "#{serial_number}.key")
 
     signer =
       Path.join(priv_dir, "nerveskey_prod_signer1.cert")
