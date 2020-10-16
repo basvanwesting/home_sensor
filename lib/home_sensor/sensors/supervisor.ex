@@ -10,7 +10,7 @@ defmodule HomeSensor.Sensors.Supervisor do
   @impl true
   def init(_args) do
     children = [
-      #{HomeSensor.Sensors.SGP30, []},
+      {HomeSensor.Sensors.SGP30, []},
       {HomeSensor.Sensors.SCD30, []},
     ]
 
