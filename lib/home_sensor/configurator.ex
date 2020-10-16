@@ -20,7 +20,7 @@ defmodule HomeSensor.Configurator do
   defp build_cacerts(signer) do
     signer_der = Certificate.pem_to_der(signer)
 
-    [signer_der | cacerts()]
+    [signer_der | NervesHubLink.Certificate.ca_certs()]
   end
 
   defp update_config(config, certfile, keyfile, signer) do
@@ -35,18 +35,6 @@ defmodule HomeSensor.Configurator do
     Logger.info("NervesHubLink config.ssl: #{inspect ssl}")
 
     %{config | socket: socket, ssl: ssl}
-  end
-
-  defp cacerts() do
-    case Application.get_env(:nerves_hub_link, :ca_certs) do
-      [] = list ->
-        list
-        |> Path.join("*")
-        |> Path.wildcard()
-        |> Enum.map(&to_der/1)
-      nil ->
-        []
-    end
   end
 
   defp to_der(file) do

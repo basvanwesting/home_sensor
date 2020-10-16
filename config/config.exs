@@ -20,6 +20,7 @@ config :nerves_hub_link,
     json_library: Jason,
     heartbeat_interval: 45_000
   ],
+  remote_iex: true,
   fwup_public_keys: [:devkey]
 
 # Set the SOURCE_DATE_EPOCH date for reproducible builds.
