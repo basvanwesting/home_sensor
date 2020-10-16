@@ -15,15 +15,10 @@ config :nerves, :firmware,
   provisioning: :nerves_hub_link
 
 config :nerves_hub_link,
+  configurator: HomeSensor.Configurator,
   socket: [
     json_library: Jason,
     heartbeat_interval: 45_000
-  ],
-  ssl: [
-    certfile: "config/certs/nerves-9794.fourstack.nl.crt",
-    keyfile:  "config/certs/nerves-9794.fourstack.nl.key"
-    #certfile: "nerves-hub/9794-cert.pem",
-    #keyfile:  "nerves-hub/9794-key.pem"
   ],
   fwup_public_keys: [:devkey]
 
