@@ -12,6 +12,8 @@ defmodule HomeSensor.Sensors.SCD30 do
 
   @address 0x61
 
+  @read_serialnr_cmd              <<0xd033::16>>
+  @read_serialnr_bytes            9
   @set_measurement_interval_cmd   <<0x4600::16>>
   @set_measurement_interval_value 2000
   @set_measurement_interval_delay 5000
@@ -32,6 +34,7 @@ defmodule HomeSensor.Sensors.SCD30 do
   defmodule State do
     @moduledoc false
     defstruct \
+      state:               :disconnected, \
       i2c_ref:             nil,  \
       co2_ppm:             nil,  \
       temperature_celsius: nil,  \
@@ -46,25 +49,28 @@ defmodule HomeSensor.Sensors.SCD30 do
     {:ok, %State{}, {:continue, :connect}}
   end
 
-  def handle_continue(:connect, state) do
-    with {:ok, i2c_ref} <- @i2c.open(@i2c_bus) do
+  def handle_continue(:connect, %State{state: :disconnected} = state) do
+    with {:ok, i2c_ref} <- @i2c.open(@i2c_bus),
+         true <- detect_device(i2c_ref) do
       Process.send_after(self(), :set_measurement_interval, @set_measurement_interval_delay)
-      {:noreply, %{state | i2c_ref: i2c_ref}}
+      {:noreply, %{state | state: :initializing, i2c_ref: i2c_ref}}
+    else
+      false -> {:noreply, state}
     end
   end
 
-  def handle_info(:set_measurement_interval, state) do
+  def handle_info(:set_measurement_interval, %State{state: :initializing} = state) do
     message = build_message(
       @set_measurement_interval_cmd,
       ceil(@set_measurement_interval_value/1000)
     )
     with :ok <- @i2c.write(state.i2c_ref, @address, message, retries: @i2c_retry_count) do
       Process.send_after(self(), :measure, @set_measurement_interval_value)
-      {:noreply, state}
+      {:noreply, %{state | state: :active}}
     end
   end
 
-  def handle_info(:measure, state) do
+  def handle_info(:measure, %State{state: :active} = state) do
     with true <- measurement_ready?(state.i2c_ref),
          %{} = data <- read_measurement(state.i2c_ref) do
 
@@ -101,7 +107,16 @@ defmodule HomeSensor.Sensors.SCD30 do
     end
   end
 
-  def handle_call(:get_measurements, _from, state) do
+  def detect_device(i2c_ref) do
+    with :ok <- @i2c.write(i2c_ref, @address, @read_serialnr_cmd, retries: @i2c_retry_count),
+         {:ok, _reply} <- @i2c.read(i2c_ref, @address, @read_serialnr_bytes, retries: @i2c_retry_count) do
+      true
+    else
+      {:error, :i2c_nak} -> false
+    end
+  end
+
+  def handle_call(:get_measurements, _from, %State{state: :active} = state) do
     measurements = [
       %Measurement{
         sensor: "SCD30",
@@ -124,6 +139,9 @@ defmodule HomeSensor.Sensors.SCD30 do
     ]
 
     {:reply, measurements, state}
+  end
+  def handle_call(:get_measurements, _from, state) do
+    {:reply, [], state}
   end
 
   def get_measurements() do
