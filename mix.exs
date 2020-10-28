@@ -2,7 +2,7 @@ defmodule HomeSensor.MixProject do
   use Mix.Project
 
   @app :home_sensor
-  @version "0.1.1"
+  @version "0.1.2"
   @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :bbb, :x86_64]
 
   def project do
